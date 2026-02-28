@@ -1,0 +1,11 @@
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/bin/Debug/net8.0/SchedFrex.Core.deps.json
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/bin/Debug/net8.0/SchedFrex.Core.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/bin/Debug/net8.0/SchedFrex.Core.pdb
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.AssemblyInfoInputs.cache
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.AssemblyInfo.cs
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.csproj.CoreCompileInputs.cache
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/refint/SchedFrex.Core.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.pdb
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/ref/SchedFrex.Core.dll
