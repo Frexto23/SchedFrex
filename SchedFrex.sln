@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedFrex.Api", "SchedFrex.Api\SchedFrex.Api.csproj", "{0B3E7AA8-EE26-4D57-B4F9-1BD1B4EAB98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedFrex.Core", "SchedFrex.Core\SchedFrex.Core.csproj", "{14208B11-26E4-46E3-ADA7-5F90FE1E7628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedFrex.DataAccess", "SchedFrex.DataAccess\SchedFrex.DataAccess.csproj", "{B6650E86-CBD4-45B9-9F90-0CFCF480ECEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedFrex.Application", "SchedFrex.Application\SchedFrex.Application.csproj", "{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64901CD6-889B-4A69-A58E-EC857E38DDF1}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B3E7AA8-EE26-4D57-B4F9-1BD1B4EAB98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B3E7AA8-EE26-4D57-B4F9-1BD1B4EAB98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B3E7AA8-EE26-4D57-B4F9-1BD1B4EAB98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B3E7AA8-EE26-4D57-B4F9-1BD1B4EAB98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14208B11-26E4-46E3-ADA7-5F90FE1E7628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14208B11-26E4-46E3-ADA7-5F90FE1E7628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14208B11-26E4-46E3-ADA7-5F90FE1E7628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14208B11-26E4-46E3-ADA7-5F90FE1E7628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6650E86-CBD4-45B9-9F90-0CFCF480ECEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6650E86-CBD4-45B9-9F90-0CFCF480ECEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6650E86-CBD4-45B9-9F90-0CFCF480ECEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6650E86-CBD4-45B9-9F90-0CFCF480ECEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
