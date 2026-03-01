@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("1b98b4db-6e59-45b3-938c-656fa42f37a5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchedFrex.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6130c281d1823b1c30be85d5ee34a687a9406dcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchedFrex.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchedFrex.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -139,6 +139,11 @@
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/SchedFrex.Core.dll
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/SchedFrex.Core.pdb
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/obj/Debug/net8.0/SchedFrex.Api.sourcelink.json
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/bin/Debug/net8.0/SchedFrex.Api.staticwebassets.endpoints.json
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/obj/Debug/net8.0/rpswa.dswa.cache.json
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Api/obj/Debug/net8.0/rjimswa.dswa.cache.json

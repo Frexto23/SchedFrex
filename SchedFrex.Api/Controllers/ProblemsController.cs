@@ -1,3 +1,6 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SchedFrex.Application.Abstractions;
 using SchedFrex.Application.Contracts;
@@ -7,6 +10,7 @@ namespace SchedFrex.Api.Controllers;
 
 [ApiController]
 [Route("problems/")]
+[Authorize]
 public class ProblemsController : ControllerBase
 {
     private readonly IProblemService _problemService;
@@ -16,9 +20,11 @@ public class ProblemsController : ControllerBase
         _problemService = problemService;
     }
 
-    [HttpGet("{userId:guid}")]
-    public async Task<ActionResult<List<ProblemResponse>>> GetByUserId(Guid userId)
+    [HttpGet]
+    public async Task<ActionResult<List<ProblemResponse>>> GetByUserId()
     {
+        var allClaims = User.Claims.Select(c => $"{c.Type}: {c.Value}").ToList();
+        var userId = Guid.Parse(User.FindFirstValue(JwtRegisteredClaimNames.Sid));
         return Ok(await _problemService.GetByUserIdAsync(userId));
     }
     

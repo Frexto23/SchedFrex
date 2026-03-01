@@ -1,7 +1,10 @@
 using AutoMapper;
+using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using SchedFrex.Api.Extensions;
 using SchedFrex.Application.Abstractions;
+using SchedFrex.Application.Authorization;
 using SchedFrex.Application.Profiles;
 using SchedFrex.Application.Services;
 using SchedFrex.Core.Abstractions;
@@ -35,10 +38,19 @@ builder.Services.AddAutoMapper(cfg => { },
     typeof(CalendarProfile).Assembly,
     typeof(ProblemDtoProfile).Assembly);
 
+// Сервисы и репозитории
+
 builder.Services.AddScoped<IProblemService, ProblemService>();
 builder.Services.AddScoped<IProblemsRepository, ProblemsRepository>();
 builder.Services.AddScoped<IRegistrationService, RegistrationService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+// Хелперы
+builder.Services.AddScoped<JwtProvider>();
+
+// Методы расширений
+builder.Services.AddJwtAuthentication(builder.Configuration);
 
 var app = builder.Build();
 
@@ -57,6 +69,19 @@ app.Urls.Add("http://0.0.0.0:80");
 // }
 
 app.UseHttpsRedirection();
+
+// Cookie Policy
+var securePolicy = app.Environment.IsDevelopment() ? CookieSecurePolicy.None : CookieSecurePolicy.Always;
+
+app.UseCookiePolicy(new CookiePolicyOptions
+{
+    MinimumSameSitePolicy = SameSiteMode.Strict,
+    HttpOnly = HttpOnlyPolicy.Always,
+    Secure =  securePolicy
+});
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

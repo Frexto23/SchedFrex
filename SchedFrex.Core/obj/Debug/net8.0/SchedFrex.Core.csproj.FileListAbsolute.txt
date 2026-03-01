@@ -9,3 +9,4 @@
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/refint/SchedFrex.Core.dll
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.pdb
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/ref/SchedFrex.Core.dll
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Core/obj/Debug/net8.0/SchedFrex.Core.sourcelink.json

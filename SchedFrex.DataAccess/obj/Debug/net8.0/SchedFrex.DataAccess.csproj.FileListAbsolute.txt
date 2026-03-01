@@ -15,3 +15,4 @@
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.DataAccess/bin/Debug/net8.0/SchedFrex.Core.dll
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.DataAccess/bin/Debug/net8.0/SchedFrex.Core.pdb
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.DataAccess/obj/Debug/net8.0/SchedFre.60955B8C.Up2Date
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.DataAccess/obj/Debug/net8.0/SchedFrex.DataAccess.sourcelink.json

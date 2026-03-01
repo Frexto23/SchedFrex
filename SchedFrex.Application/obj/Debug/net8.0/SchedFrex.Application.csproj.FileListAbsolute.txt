@@ -13,3 +13,4 @@
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Application/bin/Debug/net8.0/SchedFrex.Core.pdb
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Application/obj/Debug/net8.0/SchedFrex.Application.csproj.AssemblyReference.cache
 /Users/frexto/RiderProjects/SchedFrex/SchedFrex.Application/obj/Debug/net8.0/SchedFre.CDBBDDEA.Up2Date
+/Users/frexto/RiderProjects/SchedFrex/SchedFrex.Application/obj/Debug/net8.0/SchedFrex.Application.sourcelink.json
