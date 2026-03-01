@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "SchedFrex Postgres",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "schedule-db",
+      "Username": "frexto",
+      "SSLMode": "prefer"
+    }
+  }
+}
