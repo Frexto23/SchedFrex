@@ -12,7 +12,8 @@ public class CalendarConfiguration : IEntityTypeConfiguration<CalendarEntity>
 
         builder
             .HasOne(c => c.User)
-            .WithMany(u => u.Calendars);
+            .WithMany(u => u.Calendars)
+            .HasForeignKey(c => c.UserId);
 
         builder
             .HasMany(c => c.Entries)

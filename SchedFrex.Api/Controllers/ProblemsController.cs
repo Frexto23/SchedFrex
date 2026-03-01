@@ -1,10 +1,10 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SchedFrex.Api.Extensions;
 using SchedFrex.Application.Abstractions;
 using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Request;
+using SchedFrex.Application.Contracts.Response;
 
 namespace SchedFrex.Api.Controllers;
 
@@ -23,8 +23,7 @@ public class ProblemsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<ProblemResponse>>> GetByUserId()
     {
-        var allClaims = User.Claims.Select(c => $"{c.Type}: {c.Value}").ToList();
-        var userId = Guid.Parse(User.FindFirstValue(JwtRegisteredClaimNames.Sid));
+        var userId = User.GetUserId();
         return Ok(await _problemService.GetByUserIdAsync(userId));
     }
     

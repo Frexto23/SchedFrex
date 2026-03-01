@@ -17,7 +17,8 @@ public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
 
         builder
             .HasMany(u => u.Calendars)
-            .WithOne(c => c.User);
+            .WithOne(c => c.User)
+            .HasForeignKey(c => c.UserId);
 
         builder.Property(u => u.UserName).IsRequired().HasMaxLength(50);
         builder.Property(u => u.PasswordHash).IsRequired().HasMaxLength(250);

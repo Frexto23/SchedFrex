@@ -2,6 +2,7 @@ using AutoMapper;
 using SchedFrex.Application.Abstractions;
 using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Request;
+using SchedFrex.Application.Contracts.Response;
 using SchedFrex.Core.Abstractions;
 using SchedFrex.Core.Models;
 

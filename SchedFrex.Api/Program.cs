@@ -36,7 +36,7 @@ builder.Services.AddDbContext<CalendarDbContext>(options =>
 
 builder.Services.AddAutoMapper(cfg => { }, 
     typeof(CalendarProfile).Assembly,
-    typeof(ProblemDtoProfile).Assembly);
+    typeof(CalendarDtoProfile).Assembly);
 
 // Сервисы и репозитории
 
@@ -45,6 +45,8 @@ builder.Services.AddScoped<IProblemsRepository, ProblemsRepository>();
 builder.Services.AddScoped<IRegistrationService, RegistrationService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<ICalendarService, CalendarService>();
+builder.Services.AddScoped<ICalendarRepository, CalendarRepository>();
 
 // Хелперы
 builder.Services.AddScoped<JwtProvider>();

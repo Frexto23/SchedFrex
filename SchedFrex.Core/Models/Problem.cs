@@ -10,7 +10,7 @@ public class Problem
     public Guid UserId { get; }
     public User? User { get; }
     
-    private readonly List<TimeInterval>? TimeIntervals;
+    private readonly List<TimeInterval>? _timeIntervals;
 
     public Problem(Guid id, string title, int priority, TimeSpan duration, DateTime deadline, Guid userId, List<TimeInterval> timeIntervals)
     {
@@ -20,8 +20,8 @@ public class Problem
         Duration = duration;
         Deadline = deadline;
         UserId = userId;
-        TimeIntervals = timeIntervals;
+        _timeIntervals = timeIntervals;
     }
 
-    public List<TimeInterval>? GetTimeIntervals() => TimeIntervals;
+    public IReadOnlyList<TimeInterval>? GetTimeIntervals() => _timeIntervals?.AsReadOnly();
 }

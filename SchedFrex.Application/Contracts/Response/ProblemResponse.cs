@@ -1,4 +1,4 @@
-namespace SchedFrex.Application.Contracts;
+namespace SchedFrex.Application.Contracts.Response;
 
 public record ProblemResponse(Guid Id,
     string Title,

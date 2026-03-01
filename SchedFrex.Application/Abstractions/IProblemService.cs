@@ -1,5 +1,6 @@
 using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Request;
+using SchedFrex.Application.Contracts.Response;
 using SchedFrex.Core.Models;
 
 namespace SchedFrex.Application.Abstractions;
