@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SchedFrex.Api.Extensions;
 using SchedFrex.Application.Abstractions;
+using SchedFrex.Application.Abstractions.Queries;
 using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Response;
 
@@ -12,30 +13,30 @@ namespace SchedFrex.Api.Controllers;
 [Authorize]
 public class CalendarController : ControllerBase
 {
-    private readonly ICalendarService _calendarService;
+    private readonly ICalendarsReadRepository _calendarsReadRepository;
 
-    public CalendarController(ICalendarService calendarService)
+    public CalendarController(ICalendarsReadRepository calendarsReadRepository)
     {
-        _calendarService = calendarService;
+        _calendarsReadRepository = calendarsReadRepository;
     }
 
     [HttpGet("{id:guid}")]
     public async Task<ActionResult<CalendarResponse>> Get(Guid id)
     {
-        return Ok(await _calendarService.GetAsync(id));
+        return Ok(await _calendarsReadRepository.GetAsync(id));
     }
 
     [HttpGet]
     public async Task<ActionResult<List<CalendarResponse>>> Get()
     {
         var userId = User.GetUserId();
-        return Ok(await _calendarService.GetByUserIdAsync(userId));
+        return Ok(await _calendarsReadRepository.GetByUserIdAsync(userId));
     }
 
     [HttpDelete]
     public async Task<IActionResult> Delete(Guid id)
     {
-        await _calendarService.DeleteAsync(id);
+        await _calendarsReadRepository.DeleteAsync(id);
         return Ok();
     }
 
@@ -43,7 +44,7 @@ public class CalendarController : ControllerBase
     public async Task<ActionResult<CalendarResponse>> Create()
     {
         var userId = User.GetUserId();
-        await _calendarService.CreateAsync(userId);
+        await _calendarsReadRepository.CreateAsync(userId);
 
         return Ok();
     }

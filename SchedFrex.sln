@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		compose.yaml = compose.yaml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedFrex.Infrastructure", "SchedFrex.Infrastructure\SchedFrex.Infrastructure.csproj", "{2F6615E6-2057-4662-87C3-44E7D7083D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedFrex.Tests", "SchedFrex.Tests\SchedFrex.Tests.csproj", "{D2557068-7442-46BB-A539-B666C475C092}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +39,13 @@ Global
 		{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7370DE3-3DAA-456D-A26A-3F8BB56F890C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6615E6-2057-4662-87C3-44E7D7083D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6615E6-2057-4662-87C3-44E7D7083D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6615E6-2057-4662-87C3-44E7D7083D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6615E6-2057-4662-87C3-44E7D7083D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2557068-7442-46BB-A539-B666C475C092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2557068-7442-46BB-A539-B666C475C092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2557068-7442-46BB-A539-B666C475C092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2557068-7442-46BB-A539-B666C475C092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

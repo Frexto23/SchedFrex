@@ -1,41 +1,43 @@
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
-using SchedFrex.Core.Abstractions;
 using SchedFrex.Core.Models;
 using SchedFrex.DataAccess.Entities;
+using SchedFrex.Application.Abstractions.Queries;
+using SchedFrex.Application.Contracts.Response;
 
 namespace SchedFrex.DataAccess.Repositories;
 
-public class CalendarRepository : ICalendarRepository
+public class CalendarsReadRepository : ICalendarsReadRepository
 {
     private readonly IMapper _mapper;
     private readonly CalendarDbContext _dbContext;
 
-    public CalendarRepository(IMapper mapper, CalendarDbContext dbContext)
+    public CalendarsReadRepository(IMapper mapper, CalendarDbContext dbContext)
     {
         _mapper = mapper;
         _dbContext = dbContext;
     }
 
-    public Task<Calendar?> GetAsync(Guid id)
+    public Task<CalendarResponse?> GetAsync(Guid id)
     {
         return _dbContext.Calendars
             .AsNoTracking()
-            .ProjectTo<Calendar>(_mapper.ConfigurationProvider)
-            .FirstOrDefaultAsync(c => c.Id == id);
+            .Where(c => c.Id == id)
+            .ProjectTo<CalendarResponse>(_mapper.ConfigurationProvider)
+            .FirstOrDefaultAsync();
     }
 
-    public Task<List<Calendar>> GetByUserIdAsync(Guid userId)
+    public Task<List<CalendarResponse>> GetByUserIdAsync(Guid userId)
     {
         return _dbContext.Calendars
             .AsNoTracking()
             .Where(c => c.UserId == userId)
-            .ProjectTo<Calendar>(_mapper.ConfigurationProvider)
+            .ProjectTo<CalendarResponse>(_mapper.ConfigurationProvider)
             .ToListAsync();
     }
 
-    public async Task<Calendar> CreateAsync(Guid userId)
+    public async Task<CalendarResponse> CreateAsync(Guid userId)
     {
         var calendarEntity = new CalendarEntity
         {
@@ -45,7 +47,7 @@ public class CalendarRepository : ICalendarRepository
         calendarEntity = _dbContext.Calendars.Add(calendarEntity).Entity;
         await _dbContext.SaveChangesAsync();
 
-        return _mapper.Map<Calendar>(calendarEntity);
+        return _mapper.Map<CalendarResponse>(calendarEntity);
     }
 
     public async Task DeleteAsync(Guid id)

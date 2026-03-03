@@ -1,11 +1,9 @@
-using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Request;
 using SchedFrex.Application.Contracts.Response;
-using SchedFrex.Core.Models;
 
-namespace SchedFrex.Application.Abstractions;
+namespace SchedFrex.Application.Abstractions.Queries;
 
-public interface IProblemService
+public interface IProblemsReadRepository
 {
     public Task<ProblemResponse> CreateAsync(ProblemRequest problemRequest);
     public Task<ProblemResponse> UpdateAsync(ProblemRequest problemRequest);

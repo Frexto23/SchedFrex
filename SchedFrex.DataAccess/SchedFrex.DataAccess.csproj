@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\SchedFrex.Application\SchedFrex.Application.csproj" />
       <ProjectReference Include="..\SchedFrex.Core\SchedFrex.Core.csproj" />
     </ItemGroup>
 

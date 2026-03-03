@@ -20,7 +20,13 @@ public readonly record struct TimeInterval
         };
         return intersection.Correct() ? intersection : null;
     }
-
+    
+    /// <summary>
+    /// Ищет пересечение слота и старт тайма задачи
+    /// </summary>
+    /// <param name="other">слот</param>
+    /// <param name="durationOther">Возможное время начала задачи</param>
+    /// <returns>Возвращает возможное время начала задачи в этом слоте или null, если это невозможно</returns>
     public TimeInterval? IntersectWithDuration(TimeInterval other, TimeSpan durationOther)
     {
         var res = new TimeInterval()
@@ -31,11 +37,25 @@ public readonly record struct TimeInterval
         return res.Correct() ? res : null;
     }
 
+    /// <summary>
+    /// Разделяет слот на две части выбранной задачей
+    /// </summary>
+    /// <param name="separator">Разделитель</param>
+    /// <returns>Nullable левая и правая части соотвественно</returns>
     public (TimeInterval? left, TimeInterval? right) Divide(TimeInterval separator)
     {
-        var l = new TimeInterval(Start, separator.Start);
-        var r = new TimeInterval(separator.End, End);
-        return (Start < separator.Start ? l : null, separator.End < End ? r : null);
+        TimeInterval? l = null;
+        TimeInterval? r = null;
+        if (Start < separator.Start && separator.Start <= End)
+        {
+            l = new TimeInterval(Start, separator.Start);
+        }
+        if (separator.End < End && Start <= separator.End)
+        {
+            r = new TimeInterval(separator.End, End);
+        }
+
+        return (l, r);
     }
 
     public TimeSpan Length()

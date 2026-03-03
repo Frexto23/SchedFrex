@@ -1,9 +1,11 @@
+using SchedFrex.Core.Extensions;
+
 namespace SchedFrex.Core.Models;
 
 public class Calendar
 {
     public Guid Id { get; }
-    private readonly List<Entry> _entries;
+    private List<Entry> _entries;
 
     public Calendar(Guid id, List<Entry> entries)
     {
@@ -32,5 +34,10 @@ public class Calendar
         if (after.Correct()) result.Add(after);
         
         return result;
+    }
+
+    public void InsertEntries(List<Entry> entries)
+    {
+        _entries = _entries.MergeToList(entries);
     }
 }

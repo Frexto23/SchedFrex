@@ -1,6 +1,32 @@
-@SchedFrex_HostAddress = http://localhost:5113
+@SchedFrex_HostAddress = http://localhost:80
 
 GET {{SchedFrex_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+PUT {{SchedFrex_HostAddress}}/problems
+Accept: application/json
+#Authorization: Bearer {{auth_token}}
+{
+    "id": "019ca4f0-95ee-778c-b652-58dcd62fe5f0",
+    "title": "Подготовить отчёт по проекту",
+    "priority": 2,
+    "duration": "02:30:00",
+    "deadline": "2026-03-05T18:00:00Z",
+    "timeIntervals": [
+      {
+        "start": "0001-01-01T00:00:00",
+        "end": "0001-01-01T00:00:00"
+      }
+    ],
+    "userId": "019ca4d8-eeec-7433-a871-484f508186ec"
+}
+
+###
+
+POST {{SchedFrex_HostAddress}}/login
+{
+    "userName": "string",
+    "password": "string"
+}

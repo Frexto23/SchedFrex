@@ -1,5 +1,6 @@
 using AutoMapper;
 using SchedFrex.Application.Abstractions;
+using SchedFrex.Application.Abstractions.Commands;
 using SchedFrex.Application.Authorization;
 using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Request;
@@ -10,11 +11,11 @@ namespace SchedFrex.Application.Services;
 
 public class RegistrationService : IRegistrationService
 {
-    private readonly IUserRepository _userRepository;
+    private readonly IUsersWriteRepository _usersWriteRepository;
 
-    public RegistrationService(IUserRepository userRepository)
+    public RegistrationService(IUsersWriteRepository usersWriteRepository)
     {
-        _userRepository = userRepository;
+        _usersWriteRepository = usersWriteRepository;
     }
 
     public async Task<Guid> RegisterUserAsync(UserRequest userRequest)
@@ -22,7 +23,7 @@ public class RegistrationService : IRegistrationService
         var passwordHash = PasswordHasher.HashPassword(userRequest.Password);
         var user = new User(userRequest.UserName, passwordHash);
 
-        var response = await _userRepository.CreateAsync(user);
+        var response = await _usersWriteRepository.CreateAsync(user);
 
         return response.Id;
     }

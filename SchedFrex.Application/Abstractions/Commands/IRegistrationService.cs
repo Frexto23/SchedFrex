@@ -1,7 +1,6 @@
-using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Request;
 
-namespace SchedFrex.Application.Abstractions;
+namespace SchedFrex.Application.Abstractions.Commands;
 
 public interface IRegistrationService
 {

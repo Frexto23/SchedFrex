@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SchedFrex.Application.Abstractions;
+using SchedFrex.Application.Abstractions.Commands;
 using SchedFrex.Application.Contracts;
 using SchedFrex.Application.Contracts.Request;
 
